@@ -2,10 +2,12 @@ defmodule PlateWeb.GraphQL.Schema do
   use Absinthe.Schema
 
   query do
-    # Later
+    field :menu_items, list_of(:menu_item)
   end
 
   object :menu_item do
-
+    field :id, :id
+    field :name, :string
+    field :description, :string
   end
 end
